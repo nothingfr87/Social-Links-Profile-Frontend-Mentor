@@ -1,0 +1,72 @@
+:root {
+  --main-color: hsl(75, 94%, 57%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--grey-900);
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  font-family: "Inter";
+}
+.container {
+  background: var(--grey-800);
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: clamp(350px, 1vw, 400px);
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.container .avatar {
+  width: 80px;
+  border-radius: 50%;
+}
+.container .name {
+  color: white;
+  font-weight: 700;
+  font-size: 27px;
+  margin: -15px;
+}
+.container .location {
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.container .description {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+}
+.container .links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.container .links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  background: var(--grey-700);
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.4s ease-in;
+}
+.container .links a:hover {
+  color: var(--grey-800);
+  background: var(--main-color);
+}
